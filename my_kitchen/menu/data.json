@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Burger",
+    "category": "Main",
+    "price": 120,
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Cheese Burger",
+    "category": "Main",
+    "price": 135,
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "BBQ Chicken Pizza",
+    "category": "Main",
+    "price": 165,
+    "available": false
+  },
+  {
+    "id": 4,
+    "name": "Margherita Pizza",
+    "category": "Main",
+    "price": 140,
+    "available": true
+  },
+  {
+    "id": 5,
+    "name": "Grilled Chicken Sandwich",
+    "category": "Main",
+    "price": 110,
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "French Fries",
+    "category": "Sides",
+    "price": 50,
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Onion Rings",
+    "category": "Sides",
+    "price": 55,
+    "available": false
+  },
+  {
+    "id": 8,
+    "name": "Coleslaw Salad",
+    "category": "Sides",
+    "price": 40,
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Orange Juice",
+    "category": "Drinks",
+    "price": 45,
+    "available": true
+  },
+  {
+    "id": 10,
+    "name": "Mango Juice",
+    "category": "Drinks",
+    "price": 50,
+    "available": true
+  },
+  {
+    "id": 11,
+    "name": "Cola",
+    "category": "Drinks",
+    "price": 30,
+    "available": true
+  },
+  {
+    "id": 12,
+    "name": "Mineral Water",
+    "category": "Drinks",
+    "price": 20,
+    "available": true
+  },
+  {
+    "id": 13,
+    "name": "Chocolate Cake",
+    "category": "Dessert",
+    "price": 75,
+    "available": true
+  },
+  {
+    "id": 14,
+    "name": "Ice Cream",
+    "category": "Dessert",
+    "price": 60,
+    "available": false
+  },
+  {
+    "id": 15,
+    "name": "Cheesecake",
+    "category": "Dessert",
+    "price": 85,
+    "available": true
+  }
+]

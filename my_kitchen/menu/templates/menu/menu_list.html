@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Kitchen</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .not-available {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Kitchen 🍴</h1>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search..." value="{{ request.GET.search|default:'' }}">
+
+    <select name="category">
+        <option value="all" {% if request.GET.category == "all" or not request.GET.category %}selected{% endif %}>
+            All Categories
+        </option>
+
+        {% for category in categories %}
+            <option value="{{ category }}"
+                {% if request.GET.category == category %}selected{% endif %}>
+                {{ category }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+{% for item in items %}
+    <div class="card">
+        <h2>{{ item.name }}</h2>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Price:</strong> {{ item.price }} EGP</p>
+
+        {% if item.available %}
+            <p class="available">Available ✅</p>
+        {% else %}
+            <p class="not-available">Not Available ❌</p>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>No items found.</p>
+{% endfor %}
+
+</body>
+</html>
