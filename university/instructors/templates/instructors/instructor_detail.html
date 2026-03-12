@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ instructor.name }}</h1>
+
+<h2>Courses Taught:</h2>
+
+<ul>
+    {% for course in courses %}
+        <li class="course-card">
+            <h3>{{ course.name }} ({{ course.code }})</h3>
+
+            {% if course.image %}
+                <img src="{{ course.image.url }}" alt="{{ course.name }}" width="200">
+            {% endif %}
+
+            <h4>Students Enrolled:</h4>
+            <ul>
+                {% for student in course.students.all %}
+                    <li>{{ student.name }} ({{ student.age }} years)</li>
+                {% empty %}
+                    <li>No students enrolled</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'instructors_list' %}">Back to Instructors List</a>
+
+{% endblock %}

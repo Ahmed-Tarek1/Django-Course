@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Instructors</h1>
+<ul>
+    {% for instructor in instructors %}
+        <li>
+            <a href="{% url 'instructor_detail' instructor.pk %}">
+                {{ instructor.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
